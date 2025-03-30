@@ -11,6 +11,8 @@ export default {
         }
         
     },
+
+    useNullAsDefault: true,
     
     migrations: {
         extensions: "ts",
