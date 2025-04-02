@@ -1,10 +1,12 @@
 import { Router } from "express";
-import { TablesSessionsController } from "@/controllers/tables-sesseions-controller";
+import { TablesSessionsController } from "@/controllers/tables-sessions-controller";
 
 const tableSessionsRoutes = Router()
 
 const tableSessionsController = new TablesSessionsController()
 
-tableSessionsRoutes.post("/", tableSessionsController.index)
+tableSessionsRoutes.post("/", tableSessionsController.create)
+tableSessionsRoutes.get("/", tableSessionsController.index)
+tableSessionsRoutes.patch("/:id", tableSessionsController.update)
 
 export{ tableSessionsRoutes}
